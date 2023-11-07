@@ -11,7 +11,13 @@ pipeline {
             }
         }
 
-    
+    stage("Clean") {
+            steps {
+                script {
+                    echo "clean with Maven..."
+                    sh 'mvn clean compile'
+                }
+            }
 
     stage("Maven Build") {
             steps {
