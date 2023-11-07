@@ -11,7 +11,7 @@ pipeline {
             }
         }
 
-    }
+    
 
     stage("Maven Build") {
             steps {
@@ -22,4 +22,5 @@ pipeline {
             }
         }
 
+    }
 }
