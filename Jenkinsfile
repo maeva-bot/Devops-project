@@ -29,12 +29,39 @@ pipeline {
             }
         }
 
-     }
+
 
     stage("Deploy to nexus") {
             steps {
                 echo "Deploy to nexus..."
                 sh "mvn deploy -DskipTests=true"
+      
+      
+      
             }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
 }
