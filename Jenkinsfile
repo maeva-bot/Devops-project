@@ -42,6 +42,16 @@ pipeline {
     }
 
 
+    stage('SonarQube'){
+            steps{
+                withSonarQubeEnv('SonarQube'){
+                    echo "Running SonarQube analysis..."
+                    sh "mvn sonar:sonar -Dsonar.projectKey=maven-jenkins-pipeline -Dsonar.host.url=http://192.168.33.10:9000 -Dsonar.login=907af9eea8f2240873cab7b42ee1dc1395d6ea5c"
+                    
+            }
+                }
+                
+        }
 
 
 
