@@ -13,4 +13,13 @@ pipeline {
 
     }
 
+    stage("Maven Build") {
+            steps {
+                script {
+                    echo "Building with Maven..."
+                    sh "mvn package -DskipTests=true"
+                }
+            }
+        }
+
 }
